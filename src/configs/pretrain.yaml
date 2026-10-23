@@ -1,0 +1,48 @@
+defaults:
+  - data: passive
+  - cohort: passive_all
+  - model: nuclr_128
+  - _self_
+stage: pretrain
+checkpoint: null
+resume: null
+data_root: null             # explicit HDF5 root relocation when resuming
+seed: 0
+epochs: 20
+checkpoint_every: 1
+device: auto
+# Start conservatively; tune batch size on the allocated GPU.
+batch_size: 16
+num_workers: 4
+prefetch_factor: 1
+max_open_sessions: 8
+pin_memory: true
+precision: bfloat16
+cpu_threads: 4
+activation_checkpointing: true
+attention_chunk_size: 256
+compact_temporal: true
+output_root: results/experiments/passive_pretraining
+run_name: null
+max_steps_per_epoch: null
+log_vram: true
+log_timing: true
+sampling:
+  duration: 10.0
+  bin_size: 0.02
+  max_distance: 180.0
+  min_distance: 0.0
+  min_unit_fraction: 0.5
+loss:
+  temperature: 0.15
+  decoupled: true
+  full_denominator: true
+optimizer:
+  learning_rate: 0.0003
+  weight_decay: 0.001
+  grad_clip: 1.0
+export:
+  enabled: true
+  batch_size: 1
+  save_latents: false
+  max_windows: null

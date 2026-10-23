@@ -1,0 +1,16 @@
+examples: results/experiments/neuron_tuning_profile/745502_2024-12-10/running_examples_last30min
+output: results/experiments/neuron_tuning_profile/745502_2024-12-10/running_bouts_five_continuous
+stage: all
+n_bouts: 5
+before_s: 5.0
+after_s: 20.0
+baseline_s: [-5.0, -1.0]
+threshold_cm_s: 1.0
+detection_sigma_s: 0.2
+merge_gap_s: 1.0
+min_duration_s: 2.0
+max_duration_s: 15.0
+min_coverage: 0.95
+min_bouts_per_bin: 3
+cpu_threads: 1
+recording_root: null

@@ -1,0 +1,16 @@
+source: results/experiments/active_function/population_psth_dec10
+output: results/experiments/active_function/response_density_dec10
+animal: '745502'
+session: '2024-12-10_12-06-14'
+regions: [CP, ACB]
+window_s: [0.0, 1.0]
+response_bandwidth: 0.25
+time_bandwidth_s: 0.025
+response_grid_step: 0.025
+time_grid_points: 401
+display_y_limits: [-4.0, 8.0]
+panel_order: [ACB, CP]
+density_color_gamma: 0.5
+max_opacity: 0.9
+opacity_power: 0.5
+cpu_threads: 2

@@ -1,0 +1,8 @@
+pretrain_export: results/experiments/passive_to_active_b200/job_9048859_20261016T135505_714007Z/embeddings/pretrain/passive
+finetune_cache: results/experiments/umap/finetuned_passive_active_9048859
+output: results/experiments/encoder_comparison/passive_clusters
+neighbors: 15
+resolution: 1.0
+seeds: [0, 1, 2]
+neighbor_sensitivity: [10, 15, 20]
+min_sua_recluster: 20

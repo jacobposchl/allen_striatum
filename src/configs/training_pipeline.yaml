@@ -1,0 +1,8 @@
+# Data, cohort, and model selections live in the two training configs.
+pretrain_config: pretrain_b200
+finetune_config: finetune_b200
+output_root: results/experiments/passive_to_active_b200
+cpu_threads: 4
+export:
+  batch_size: 1
+  save_latents: false

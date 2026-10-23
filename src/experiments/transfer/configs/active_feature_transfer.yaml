@@ -1,0 +1,15 @@
+source: results/experiments/encoder_comparison/active
+stage: all
+targets: results/experiments/encoder_comparison/active_glm/glm_targets.csv
+glm: results/experiments/glm/active_cache_h5_v2
+output: results/experiments/active_function/multifeature_dec10_dec18
+sessions: ['2024-12-10_12-06-14', '2024-12-18_11-34-52']
+encoder: finetuned
+folds: 5
+kernel_components: 2
+scalar_components: 1
+neighbors: 10
+bootstrap_samples: 1000
+permutations: 999
+seed: 0
+cpu_threads: 2

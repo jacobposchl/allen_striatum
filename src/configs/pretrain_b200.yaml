@@ -1,0 +1,9 @@
+defaults:
+  - pretrain
+  - _self_
+epochs: 50
+checkpoint_every: 5
+device: cuda
+# The sequential pipeline exports after both training stages finish.
+export:
+  enabled: false

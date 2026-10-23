@@ -1,0 +1,15 @@
+source: results/experiments/encoder_comparison/active
+features: results/experiments/active_function/multifeature_dec10_dec18
+coordinates: results/experiments/umap/finetuned_active_745502_9048859/per_session/745502_2024-12-10_12-06-14_coordinates.csv
+output: results/experiments/active_function/glm_maps_dec10
+session: '2024-12-10_12-06-14'
+encoder: finetuned
+selected_features: [cue, choice_common, right_minus_left, outcome]
+summary_s: [0.0, 1.0]
+temporal_windows:
+  - {label: 'Before · −0.5–0 s', start: -0.5, stop: 0.0}
+  - {label: 'Early · 0–0.3 s', start: 0.0, stop: 0.3}
+  - {label: 'Late · 0.5–1 s', start: 0.5, stop: 1.0}
+pca_components: 10
+color_quantile: 0.98
+cpu_threads: 2

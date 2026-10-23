@@ -1,0 +1,14 @@
+# Timing analyses require a fresh Brainsets export with a recording_windows manifest.
+export: results/nuclr/2026-09-12/222248_705753/nuclr_seed0/embeddings/pooled/745502/2024-12-10_12-06-14/experiment1_recording1
+recording: 745502/2024-12-10_12-06-14/experiment1_recording1
+task_source: results/experiments/temporal_neighbors/sep12_745502_2024-12-10_k10/pairwise_gt75/task_traces
+output: results/experiments/direct_distance/sep12_745502_2024-12-10
+stage: all
+min_presence_fraction: 0.75
+min_train_windows: 100
+min_test_windows: 50
+trend_minutes: 5
+hac_lags: 6
+top_per_group: 3
+seed: 0
+cpu_threads: 2

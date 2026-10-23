@@ -1,0 +1,12 @@
+defaults:
+  - data: active
+  - cohort: active_745502
+  - _self_
+checkpoint: null
+data_root: null
+output: null
+device: auto
+batch_size: 1
+save_latents: false
+max_windows: null
+cpu_threads: 2

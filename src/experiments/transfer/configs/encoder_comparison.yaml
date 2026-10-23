@@ -1,0 +1,9 @@
+output: results/experiments/encoder_comparison/active
+historical: results/experiments/umap/active_2026-09-12
+historical_clusters: results/experiments/clustering/sep12_per_recording/units.csv
+passive_pretrained: results/experiments/passive_to_active_b200/job_9048859_20261016T135505_714007Z/embeddings/pretrain/active
+finetuned: results/experiments/passive_to_active_b200/job_9048859_20261016T135505_714007Z/embeddings/finetune/active
+seed: 0
+neighbors: 15
+permutations: 199
+cpu_threads: 2

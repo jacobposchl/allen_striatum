@@ -1,0 +1,17 @@
+mode: rebin_peaks
+source: results/experiments/active_function/population_psth_dec10
+output: results/experiments/active_function/region_peak_timing_dec10_20ms
+animal: '745502'
+session: '2024-12-10_12-06-14'
+regions: [CP, ACB]
+region_colors:
+  CP: '#DC3C44'
+  ACB: '#2563EB'
+window_s: [0.0, 1.0]
+display_window_s: [0.0, 0.6]
+display_ticks_s: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6]
+density_ylabel: Density (per second)
+bin_size_s: 0.02
+density_bandwidth_s: 0.02
+cpu_threads: 2
+recording_root: null

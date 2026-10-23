@@ -1,0 +1,8 @@
+source: results/experiments/active_function/population_psth_dec10
+output: results/experiments/active_function/timing_sorted_psth_dec10
+animal: '745502'
+session: '2024-12-10_12-06-14'
+regions: [CP, ACB]
+window_s: [0.0, 1.0]
+tie_seed: 47
+cpu_threads: 2

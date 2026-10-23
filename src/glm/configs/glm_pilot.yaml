@@ -1,0 +1,19 @@
+recording: 745502/2024-12-10_12-06-14/experiment1_recording1
+animal: '745502'
+session: '2024-12-10_12-06-14'
+output: results/experiments/glm/745502_2024-12-10_pilot_h5
+regions: [ACB, CP]
+sorting: [sua, mua]
+bin_size: 0.02
+block_trials: 20
+guard_s: 3.0
+trend_spacing_s: 300
+alphas: [0.0001, 0.001, 0.01]
+max_iter: 800
+min_train_spikes: 50
+workers: 6
+cpu_threads: 1
+unit_limit: null
+stage: all
+allow_no_opto: false
+recording_root: null

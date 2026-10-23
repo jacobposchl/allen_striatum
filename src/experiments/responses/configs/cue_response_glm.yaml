@@ -1,0 +1,17 @@
+source: results/experiments/active_function/region_peak_timing_dec10_20ms
+recording: 745502/2024-12-10_12-06-14/experiment1_recording1
+output: results/experiments/active_function/cue_response_glm_dec10
+animal: '745502'
+session: '2024-12-10_12-06-14'
+regions: [CP, ACB]
+bin_size_s: 0.02
+baseline_s: [-1.0, -0.2]
+response_s: [0.0, 1.0]
+basis_count: 5
+basis_log_offset_s: 0.02
+coefficient_prior_sd: 2.0
+folds: 3
+fold_policy: chronological_thirds
+max_iter: 400
+cpu_threads: 2
+recording_root: null

@@ -1,0 +1,7 @@
+clusters: results/experiments/clustering/sep12_per_recording
+glm: results/experiments/glm/active_cache_h5_v2
+output: results/experiments/cluster_glm/sep12_active_cache_h5_v2
+minimum_cluster_units: 5
+cpu_threads: 2
+focus_recording: 754313_2025-03-31_14-54-44_experiment1_recording1
+focus_clusters: [0, 2, 5]

@@ -1,0 +1,5 @@
+clusters: results/experiments/clustering/sep12_per_recording/recordings/745502_2024-12-10_12-06-14_experiment1_recording1
+glm: results/experiments/glm/745502_2024-12-10_pilot_h5
+output: results/experiments/cluster_glm/sep12_745502_2024-12-10
+minimum_cluster_units: 5
+cpu_threads: 2

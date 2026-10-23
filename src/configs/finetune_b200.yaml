@@ -1,0 +1,8 @@
+defaults:
+  - finetune
+  - _self_
+epochs: 10
+checkpoint_every: 1
+device: cuda
+export:
+  enabled: false

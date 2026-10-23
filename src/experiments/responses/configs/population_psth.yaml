@@ -1,0 +1,22 @@
+recording: 745502/2024-12-10_12-06-14/experiment1_recording1
+output: results/experiments/active_function/population_psth_dec10
+animal: '745502'
+session: '2024-12-10_12-06-14'
+sorting: [sua, mua]
+# This recording's probe coordinate increases toward cortex (verified against CCF DV).
+depth_ascending: false
+depth_axis_label: Superficial → deep
+region_views:
+  cp_acb: [CP, ACB]
+region_view_style:
+  cp_acb:
+    show_depth_label: false
+    shared_lick_trace: true
+before_s: 2.0
+after_s: 3.0
+bin_size_s: 0.05
+baseline_s: [-1.0, -0.2]
+color_quantile: 0.99
+cpu_threads: 2
+allow_no_opto: false
+recording_root: null

@@ -1,0 +1,13 @@
+# Timing analyses require a fresh Brainsets export with a recording_windows manifest.
+source: results/experiments/umap/active_2026-09-12
+export: results/nuclr/2026-09-12/222248_705753/nuclr_seed0/embeddings/pooled
+data_root: data/processed/active
+output: results/experiments/clustering/sep12_per_recording
+neighbors: 15
+neighbor_sensitivity: [10, 15, 25]
+seeds: [0, 1, 2]
+resolution: 1.0
+min_cluster_size: 8
+separation_threshold: 0.2
+stability_threshold: 0.7
+cpu_threads: 2

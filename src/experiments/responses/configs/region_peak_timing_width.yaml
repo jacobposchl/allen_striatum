@@ -1,0 +1,13 @@
+mode: filter_peak_width
+source: results/experiments/active_function/region_peak_timing_dec10_20ms
+output: results/experiments/active_function/region_peak_timing_dec10_20ms/short_peak_widths_300ms
+animal: '745502'
+session: '2024-12-10_12-06-14'
+regions: [CP, ACB]
+peak_window_s: [0.0, 1.0]
+display_window_s: [0.0, 0.6]
+bin_size_s: 0.02
+smoothing_sigma_s: 0.02
+height_fraction: 0.5
+max_peak_width_s: 0.3
+cpu_threads: 2

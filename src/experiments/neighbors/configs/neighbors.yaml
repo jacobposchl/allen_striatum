@@ -1,0 +1,10 @@
+# Timing analyses require a fresh Brainsets export with a recording_windows manifest.
+embeddings: results/nuclr/2026-09-12/222248_705753/nuclr_seed0/embeddings
+animal: '745502'
+session: '2024-12-10_12-06-14'
+recording: experiment1_recording1
+classes: [D1, D2]
+k: 10
+metric: cosine
+output: results/experiments/temporal_neighbors/sep12_745502_2024-12-10_k10
+cpu_threads: 2

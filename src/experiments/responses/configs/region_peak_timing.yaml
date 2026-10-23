@@ -1,0 +1,14 @@
+source: results/experiments/active_function/population_psth_dec10
+output: results/experiments/active_function/region_peak_timing_dec10
+animal: '745502'
+session: '2024-12-10_12-06-14'
+regions: [CP, ACB]
+window_s: [0.0, 1.0]
+baseline_s: [-1.0, -0.2]
+density_bandwidth_s: 0.05
+validation_block_trials: 10
+response_fdr: 0.05
+peak_agreement_s: 0.1
+scatter_jitter_s: 0.01
+scatter_seed: 47
+cpu_threads: 2

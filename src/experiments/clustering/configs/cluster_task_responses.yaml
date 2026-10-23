@@ -1,0 +1,28 @@
+comparison: results/experiments/cluster_glm/sep12_active_cache_h5_v2
+glm: results/experiments/glm/active_cache_h5_v2
+output: results/experiments/cluster_task_responses/sep12_march31_dec10
+recordings:
+  - key: 754313_2025-03-31_14-54-44_experiment1_recording1
+    clusters: [0, 5]
+  - key: 745502_2024-12-10_12-06-14_experiment1_recording1
+    clusters: [0, 1, 4]
+bout_gap_s: 1.0
+bout_min_licks: 3
+bout_min_duration_s: 1.0
+before_s: 2.0
+after_s: 3.0
+offset_before_s: 0.8
+offset_after_s: 0.8
+plot_bin_s: 0.1
+baseline_s: [-1.0, -0.2]
+response_s: [0.0, 0.8]
+offset_baseline_s: [-0.8, -0.2]
+offset_response_s: [0.2, 0.8]
+min_events: 5
+match_rate_ratio: 2.0
+match_isi_ratio: 2.0
+match_peak_valley_ms: 0.2
+match_half_width_ms: 0.08
+match_depth: 400.0
+match_availability: 0.25
+cpu_threads: 2

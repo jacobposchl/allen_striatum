@@ -1,0 +1,10 @@
+source: results/experiments/encoder_comparison/active
+glm: results/experiments/glm/active_cache_h5_v2
+physiology: results/experiments/clustering/sep12_per_recording/units.csv
+output: results/experiments/encoder_comparison/active_glm
+animal: '745502'
+sessions: ['2024-12-10_12-06-14', '2024-12-18_11-34-52']
+minimum_cluster_units: 5
+permutations: 999
+matching_permutations: 4999
+seed: 1701

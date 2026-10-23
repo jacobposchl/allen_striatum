@@ -1,0 +1,8 @@
+passive: results/experiments/passive_to_active_b200/job_9048859_20261016T135505_714007Z/embeddings/finetune/passive
+active: results/experiments/passive_to_active_b200/job_9048859_20261016T135505_714007Z/embeddings/finetune/active
+output: results/experiments/umap/finetuned_passive_active_9048859
+seed: 0
+neighbors: 15
+min_dist: 0.1
+cpu_threads: 2
+passive_examples: 2

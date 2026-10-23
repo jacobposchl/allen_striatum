@@ -1,0 +1,20 @@
+defaults:
+  - cohort: all
+  - _self_
+root: data/processed/active
+output: results/experiments/glm/active_cache_h5_v2
+regions: [ACB, CP]
+sorting: [sua, mua]
+bin_size: 0.02
+block_trials: 20
+guard_s: 3.0
+trend_spacing_s: 300
+alphas: [0.0001, 0.001, 0.01]
+max_iter: 800
+min_train_spikes: 50
+workers: 18
+cpu_threads: 1
+allow_missing_movement: true
+allow_missing_anatomy: true
+stage: all
+allow_no_opto: false

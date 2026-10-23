@@ -1,0 +1,10 @@
+correlations: results/experiments/neuron_tuning_profile/745502_2024-12-10/running_correlation
+output: results/experiments/neuron_tuning_profile/745502_2024-12-10/running_examples_last30min
+stage: all
+duration_s: 1800.0
+bin_size_s: 0.1
+smoothing_sigma_s: 1.0
+min_window_coverage: 0.8
+min_median_r: 0.2
+cpu_threads: 1
+recording_root: null

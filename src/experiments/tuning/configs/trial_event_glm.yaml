@@ -1,0 +1,26 @@
+recording: 745502/2024-12-10_12-06-14/experiment1_recording1
+output: results/experiments/neuron_tuning_profile/745502_2024-12-10/trial_event_glm_v2
+trial_filter_policy: current_trial_only_v2
+stage: all
+animal: '745502'
+session: '2024-12-10_12-06-14'
+regions: [CP, ACB]
+sorting: [sua, mua]
+bin_size_s: 0.02
+kernel_window_s: [-1.0, 2.0]
+summary_window_s: [0.0, 1.0]
+basis_count: 5
+coefficient_prior_sd: 2.0
+# Defer additional regularization comparisons until validation is agreed.
+prior_sd_sensitivity: []
+max_iter: 100
+validation:
+  protocol: threefold_subblocks_v1
+  n_blocks: 9
+  n_folds: 3
+  boundary_guard_s: 1.0
+  minimum_spikes: 50
+workers: 8
+cpu_threads: 1
+allow_no_opto: false
+recording_root: null

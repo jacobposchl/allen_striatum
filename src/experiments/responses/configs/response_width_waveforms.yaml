@@ -1,0 +1,10 @@
+mode: waveform_width_association
+recording: 745502/2024-12-10_12-06-14/experiment1_recording1
+source: results/experiments/active_function/region_peak_timing_dec10_20ms/short_peak_widths_300ms
+output: results/experiments/active_function/region_peak_timing_dec10_20ms/width_waveform_association
+repeats: 5
+folds: 5
+seed: 47
+waveform_pcs: 10
+cpu_threads: 2
+recording_root: null

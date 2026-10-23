@@ -1,0 +1,24 @@
+defaults:
+  - cohort: all
+  - _self_
+action: fit
+# Directory containing pooled/manifest.json, or the pooled directory itself.
+embeddings: null
+classifier: null
+output: results/experiments/active_745502/celltypes
+# Unmapped labels are excluded from training, never treated as negative labels.
+label_map:
+  D1: MSN
+  D2: MSN
+  ChAT: ChAT
+classes: [ChAT, MSN]
+features: embedding
+baseline_features: [firing_rate_hz, waveform_duration_ms, waveform_spread_um, isi_cv, prop_long_isi]
+evaluate_baseline: true
+holdout: session
+C: 1.0
+max_iter: 2000
+seed: 0
+single_units_only: true
+min_probability: 0.8
+cpu_threads: 1

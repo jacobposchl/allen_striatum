@@ -1,0 +1,5 @@
+source: results/experiments/neuron_tuning_profile/745502_2024-12-10/movement_licking_v1
+output: results/experiments/neuron_tuning_profile/745502_2024-12-10/movement_licking_review_v1
+resamples: 1000
+seed: 9282093
+cpu_threads: 1

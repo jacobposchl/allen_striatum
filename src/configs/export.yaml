@@ -1,0 +1,13 @@
+# data=null means the checkpoint's own data. Use --config export_passive
+# for an explicit transfer export, or --config export_active for active data.
+checkpoint: null
+data: null
+# Override the recording directory after moving a checkpoint; selection stays unchanged.
+data_root: null
+cohort: null
+output: null
+device: auto
+batch_size: 1
+save_latents: false
+max_windows: null
+cpu_threads: 2

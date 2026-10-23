@@ -1,0 +1,18 @@
+defaults:
+  - cohort: active_745502
+  - _self_
+# Either load an existing coordinate CSV (lightweight) or fit UMAP from exports.
+# suite=true produces combined cell-type/animal/session views and an independent
+# cell-type UMAP per session. Use cohort=all for all exported recordings.
+suite: false
+per_session_colorings: [cell_type]
+coordinates: null
+embeddings: null
+predictions: null
+features: null
+output: results/experiments/active_745502/plots
+color: label
+seed: 0
+neighbors: 15
+min_dist: 0.1
+cpu_threads: 1

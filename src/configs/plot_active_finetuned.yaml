@@ -1,0 +1,8 @@
+defaults:
+  - plot
+  - _self_
+suite: true
+per_session_colorings: [cell_type, animal, session]
+embeddings: results/experiments/passive_to_active_b200/job_9048859_20261016T135505_714007Z/embeddings/finetune/active
+output: results/experiments/umap/finetuned_active_745502_9048859
+cpu_threads: 2

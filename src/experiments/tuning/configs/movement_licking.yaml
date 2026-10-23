@@ -1,0 +1,35 @@
+recording: 745502/2024-12-10_12-06-14/experiment1_recording1
+output: results/experiments/neuron_tuning_profile/745502_2024-12-10/movement_licking_v1
+stage: all
+animal: '745502'
+session: '2024-12-10_12-06-14'
+regions: [CP, ACB]
+sorting: [sua, mua]
+bin_size_s: 0.1
+lick_rate_window_s: 0.5
+lags_s: [-0.5, 0.0, 0.5]
+running:
+  onset_cm_s: 1.0
+  offset_cm_s: 0.5
+  detection_sigma_s: 0.2
+  min_duration_s: 2.0
+  merge_gap_s: 1.0
+  baseline_s: [-5.0, -1.0]
+  min_baseline_s: 2.0
+  min_bout_coverage: 0.9
+  min_speed_sd_cm_s: 0.25
+  onset_window_s: [-5.0, 10.0]
+  onset_smoothing_sigma_s: 0.2
+  phase_bins: 20
+  sensitivity_factors: [0.75, 1.0, 1.25]
+validation:
+  time_block_s: 60.0
+  min_block_coverage: 0.8
+  bootstrap_repetitions: 400
+  bootstrap_consecutive_bouts: 3
+  seed: 745502
+  minimum_bouts: 5
+  minimum_spikes: 50
+cpu_threads: 1
+allow_no_opto: false
+recording_root: null

@@ -1,0 +1,4 @@
+bins_per_latent: 2
+dim: 128
+heads: 4
+dropout: 0.25

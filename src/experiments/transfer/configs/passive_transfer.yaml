@@ -1,0 +1,15 @@
+source: results/experiments/encoder_comparison/passive_clusters
+finetune_cache: results/experiments/umap/finetuned_passive_active_9048859
+data_root: data/processed/passive
+output: results/experiments/passive_transfer/reference_655572_20230515
+reference: 655572/ecephys_655572_2023-05-15_15-06-36/passive
+stage: all
+radius_quantile: 0.95
+seed: 0
+permutations: 499
+cpu_threads: 2
+bin_s: 0.5
+onset_bin_s: 0.1
+onset_window_s: [-2.0, 3.0]
+minimum_events: 5
+minimum_reference_units: 5

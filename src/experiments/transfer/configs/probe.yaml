@@ -1,0 +1,14 @@
+# Compare original mean embedding vectors, never the two-dimensional UMAP.
+sources:
+  - name: September 12
+    directory: results/experiments/umap/active_2026-09-12
+  - name: September 15
+    directory: results/experiments/umap/active_2026-09-15
+output: results/experiments/identity_probe/sep12_vs_sep15
+expected_common_units: 2453
+expected_dimensions: 48
+n_splits: 5
+seed: 0
+C: 1.0
+max_iter: 3000
+cpu_threads: 4
