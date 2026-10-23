@@ -47,6 +47,7 @@ COMMANDS = {
     "movement_licking": "Compute per-unit running-bout and licking profiles with support and temporal checks",
     "trial_event_glm": "Fit five-basis choice/outcome profiles with three-fold blocked prediction checks",
     "movement_licking_review": "Review movement/licking support, sensitivity, and descriptive candidate counts",
+    "speed_distribution": "Compare task running-speed distributions across distinct sessions",
 }
 
 
@@ -174,6 +175,8 @@ def dispatch(command, cfg):
         from src.experiments.tuning.trial_event_glm import run
     elif command == "movement_licking_review":
         from src.experiments.tuning.movement_licking_review import run
+    elif command == "speed_distribution":
+        from src.experiments.tuning.speed_distribution import run
     elif command == "plot":
         from src.embeddings.plotting import run
     else:

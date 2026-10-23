@@ -45,7 +45,7 @@ def inventory(cfg, out):
             for name in REQUIRED_EVENTS:
                 if not recording.has_events(name):
                     missing.append(name)
-            movement = recording.has_signal('speed')
+            movement = recording.has_signal('speed', domain='behavior')
             units = recording.units
             anatomy_available = units.ccf_acronym.notna().any()
             sorting_available = 'decoder_label' in units

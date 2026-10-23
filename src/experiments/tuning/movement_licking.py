@@ -197,7 +197,7 @@ def prepare(cfg):
         valid &= ((edges[1:] <= trial.start_time - padding['before'])
                   | (edges[:-1] >= trial.stop_time + padding['after']))
     recording = Recording(recording_path(cfg))
-    timestamps, data = recording.signal('speed')
+    timestamps, data = recording.signal('speed', domain='behavior')
     timestamps = timestamps - info['clock']['origin_s']
     data = np.asarray(data, float).ravel()
     if len(data) != len(timestamps) or not np.all(np.diff(timestamps) > 0):

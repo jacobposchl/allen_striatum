@@ -135,7 +135,7 @@ def add_timeseries_views(source, target, warnings):
         elif not valid or timestamp_source == "unavailable":
             # Invalid/misaligned arrays cannot satisfy ArrayDict's shared row
             # length. Preserve them in a generic Data node, marked unavailable.
-            node.attrs["object"] = "Data"
+            node.attrs.update(object="Data", absolute_start=0.0)
             warnings.append(f"Canonical signal {node.name}: {status}; source values preserved")
     if domains:
         interval([[min(a for a, _ in domains), max(b for _, b in domains)]]).to_hdf5(target.create_group("domain"))
@@ -144,6 +144,7 @@ def add_timeseries_views(source, target, warnings):
 
 def add_events(file, archive):
     target = data_group(file, "events")
+    bounds = []
     for name, path in EVENT_PATHS.items():
         node = target.create_group(name)
         node.attrs.update(object="ArrayDict", _unicode_keys=np.array([], dtype="S"), source_path=path)
@@ -156,9 +157,11 @@ def add_events(file, archive):
         valid = times.ndim == 1 and np.isfinite(times).all() and np.all(np.diff(times) >= 0)
         node.attrs.update(status="invalid" if not valid else "present" if len(times) else "empty", available=bool(valid))
         if valid and len(times):
-            add_series_domain(node, times)
+            bounds.append(add_series_domain(node, times))
         elif not valid:
-            node.attrs["object"] = "Data"
+            node.attrs.update(object="Data", absolute_start=0.0)
+    if bounds:
+        interval([[min(a for a, _ in bounds), max(b for _, b in bounds)]]).to_hdf5(target.create_group("domain"))
 
 
 def add_electrodes(file, archive, n_units):
@@ -395,8 +398,7 @@ def build(file, source, info, sidecars):
     onset = selection_opto_start(source, info)
     domains.attrs["opto_onset_s"] = np.nan if onset is None else onset
     domains.attrs["opto_onset_available"] = onset is not None
-    if bounds:
-        interval([[min(a for a, _ in bounds), max(b for _, b in bounds)]]).to_hdf5(domains.create_group("domain"))
+    interval([[min(a for a, _ in bounds), max(b for _, b in bounds)]] if bounds else []).to_hdf5(domains.create_group("domain"))
     bounds.extend(add_trials(file, source, archive, warnings))
     add_events(file, archive)
     signals = data_group(file, "signals")
@@ -422,6 +424,7 @@ def build(file, source, info, sidecars):
     clock = info.get("clock", {})
     if clock.get("origin_s") is not None and clock.get("duration_s") is not None:
         bounds.append([clock["origin_s"], clock["origin_s"] + clock["duration_s"]])
-    if bounds:
-        interval([[min(a for a, _ in bounds), max(b for _, b in bounds)]]).to_hdf5(file.create_group("domain"))
+    interval([[min(a for a, _ in bounds), max(b for _, b in bounds)]] if bounds else []).to_hdf5(file.create_group("domain"))
+    from preprocess.allen_striatum_active.signal_domains import add_signal_domains
+    add_signal_domains(file, source, info)
     return warnings

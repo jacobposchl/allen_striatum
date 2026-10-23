@@ -90,7 +90,7 @@ def run(cfg):
     for side in ['left', 'right']:
         timestamps = recording.events(f'{side}_lick') - origin
         behavior[f'{side}_licks_per_s'] = np.histogram(timestamps, edges)[0] / duration
-    timestamps, speed = recording.signal('speed')
+    timestamps, speed = recording.signal('speed', domain='behavior')
     timestamps = timestamps - origin
     speed = np.abs(np.asarray(speed).reshape(-1))
     if len(speed) != len(timestamps):

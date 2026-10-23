@@ -229,6 +229,8 @@ def validate_export(path):
                 if not np.array_equal(file[f"events/{name}/timestamps"][:], source[source_path][:], equal_nan=True):
                     raise ValueError(f"Canonical/source event mismatch: {name}")
         result = json.loads(file["provenance"].attrs["summary_json"])
+        from preprocess.allen_striatum_active.signal_domains import validate_signal_domains
+        result["signal_domain_views_verified"] = validate_signal_domains(file)
         result.update(path=str(path), validation="passed", arrays_verified=len(checks), bytes=Path(path).stat().st_size)
         return result
 

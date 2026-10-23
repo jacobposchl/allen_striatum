@@ -185,10 +185,10 @@ def run(cfg):
                           selected.global_unit_id):
         raise ValueError('Selected unit identities do not match spike-count rows')
 
-    timestamps, measured = recording.signal('speed')
+    timestamps, measured = recording.signal('speed', domain='behavior')
     timestamps = timestamps - info['clock']['origin_s']
     measured = np.asarray(measured, float).reshape(-1)
-    velocity_info = recording.signal_info('speed')
+    velocity_info = recording.signal_info('speed', domain='behavior')
     if len(measured) != len(timestamps) or not np.all(np.diff(timestamps) > 0):
         raise ValueError('Invalid velocity sample clock')
     index = np.floor((timestamps - edges[0]) / dt).astype(int)

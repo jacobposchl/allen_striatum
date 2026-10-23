@@ -1,0 +1,7 @@
+recording_root: data/processed/active
+output: results/experiments/neuron_tuning_profile/running_speed_distributions_500ms
+maximum_sessions: 4
+bin_s: 0.5
+speed_bin_cm_s: 0.25
+minimum_coverage: 0.8
+cpu_threads: 1

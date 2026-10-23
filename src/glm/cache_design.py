@@ -77,7 +77,7 @@ def prepare(cfg, output):
         else: block=event_design(edges,events[name],start,end,count)
         blocks.append(sparse.csr_matrix(block));slices[name]=list(range(position,position+count));position+=count
         columns.extend([f'{name}_{i}' for i in range(count)])
-    movement_available = recording.has_signal('speed')
+    movement_available = recording.has_signal('speed', domain='behavior')
     speed_bin = np.full(len(centers), np.nan)
     if movement_available:
         speed_bin = binned_speed(recording, edges, interpolate=4)

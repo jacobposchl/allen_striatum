@@ -33,7 +33,7 @@ def task_data(cfg, starts, duration, origin):
     for side in ['left', 'right']:
         times = recording.events(f'{side}_lick') - origin
         behavior[f'{side}_licks_per_s'] = np.histogram(times, edges)[0] / duration
-    times, speed = recording.signal('speed')
+    times, speed = recording.signal('speed', domain='behavior')
     times = times - origin
     speed = np.abs(np.asarray(speed).reshape(-1))
     if len(speed) != len(times):
