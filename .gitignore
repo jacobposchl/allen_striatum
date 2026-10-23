@@ -4,6 +4,6 @@ venv/
 *.egg-info/
 build/
 dist/
-data/
+/data/
 results/
 AGENTS.md

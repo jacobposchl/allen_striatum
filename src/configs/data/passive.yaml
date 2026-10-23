@@ -1,0 +1,12 @@
+format: brainsets
+root: data/processed/passive
+domain: pre_stimulus
+regions: [CP, ACB, OT, STR]
+exclude_noise: true
+qc: none                   # none | default; pre_opto is active-only
+exclude_histology_failed: false
+buffer_s: 0.0
+tip_sites: null
+sorting: null
+include_unknown_regions: false
+labels: null

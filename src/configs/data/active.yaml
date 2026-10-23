@@ -1,0 +1,12 @@
+format: brainsets
+root: data/processed/active
+# Selections are applied while reading; recording files remain unchanged.
+domain: pre_opto
+buffer_s: 300.0
+tip_sites: 150
+qc: none                   # none | default | pre_opto
+exclude_noise: true
+sorting: null
+regions: null
+include_unknown_regions: false
+labels: null
